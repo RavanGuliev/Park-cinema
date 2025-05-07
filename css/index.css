@@ -1,0 +1,105 @@
+.btnsb:hover{
+    color: #c4281d;
+    transition: .10s;
+}
+
+.fira-sans-medium {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .lione {
+    color: gray;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .lione.active {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+
+  .roboto{
+    font-family: "Roboto", sans-serif;
+  }
+
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Ağ rəng üçün */
+    cursor: pointer;
+  }
+
+
+  .tick {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.555)), 
+                url('/img/movie-herobg.svg') center/cover no-repeat;
+    border-radius: 15px;
+}
+
+
+  
+  
+
+.seat-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+#seatContainer {
+  border-collapse: separate;
+  border-spacing: 6px;
+  min-width: max-content;
+}
+
+
+#seatContainer td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #d3d3d3;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+#seatContainer td:empty {
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  #seatContainer td {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  #seatContainer td {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    border-radius: 3px;
+  }
+}
+
+
+#seatContainer td.selected {
+  background-color: #d52b1e; 
+  color: white;
+}

@@ -1,0 +1,17 @@
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #e50914; 
+  
+  }
+ 
+
+  
+
+  * {
+    scrollbar-color: #e50914 #373737;
+    scrollbar-width: 40px;
+  
+  }
+
+
+  

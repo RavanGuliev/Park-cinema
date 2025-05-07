@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Cinema Tommy</title>
+  <link rel="stylesheet" href="src/input.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/scroll.css">
+  <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-[#373737]">
+  <header class=" fira-sans-medium bg-[#373737] ">
+    <div
+      class=" justify-center  flex  md:justify-between place-content-center items-center w-[100%]  px-12 z-9999  ">
+      <div class="flex place-content-center gap-10 md:gap-15 items-center lg:gap-30 sm:flex justify-center ">
+        <a href="index.htm"><img class="w-[150px] t-0 h-[80px]" src="/img/logo.svg" alt=""></a>
+
+        <ul class=" hidden    text-white  gap-5 md:gap-5 lg:gap-20 text-[16px] md:flex lg:flex ">
+          <li><a class="btnsb " href="">Kinoteatrlar</a></li>
+          <li><a class="btnsb " href="">Aksiyalar</a></li>
+          <li><a class="btnsb " href="">FAQ</a></li>
+          <li><a class="btnsb " href="">Əlaqə</a></li>
+          <li><a class="btnsb " href="">Profil</a></li>
+        </ul>
+
+      </div>
+      <div>
+        <div class="dropdown pt-1 hidden md:flex  lg:flex">
+          <div tabindex="0" role="button" class="btn text-white  bg-transparent border-0 shadow-none"><img
+              src="img/az-flag.svg" alt=""><span>AZE</span><i class="fa-solid fa-chevron-down mr-1"></i></div>
+          <ul tabindex="0"
+            class="dropdown-content menu bg-base-100 rounded-box z-1 w-20 flex  justify-center place-content-center items-center shadow-sm">
+            <li><a><img src="img/az-flag.svg" alt=""><span>AZE</span></a></li>
+            <li><a><img src="img/en-flag.svg" alt=""><span>EN</span></a></li>
+            <li><a><img src="img/ru-flag.svg" alt=""><span>RU</span></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+  
+  <main class=" bg-[#373737]  fira-sans-medium w-full">
+ <div id="banner" class=" p-5 mx-auto">
+  
+ </div>
+<div class=" pb-10">
+ 
+  <div class="p-5 md:p-10   lg:p-20 max-w-full rounded-3xl  bg-[#4d4d4d] " >
+     <div class=" flex flex-col gap-3 justify-end items-end ">
+      <button class="bg-[#d3d3d3] rounded-md p-3" onclick="zoomIn()">+</button>
+      <button class="bg-[#d3d3d3] rounded-md p-3" onclick="zoomOut()">-</button>
+    </div> 
+   
+    <div class="seat-wrapper">
+      <table id="seatContainer">
+       <td id="seats" onclick="change()"></td>
+      </table>
+    </div>
+    <div class="flex  flex-col pt-50">
+      <h1 class="flex justify-center items-center text-white font-medium text-2xl">Ekran</h1>
+      <img src="img/screen.svg" alt="">
+    </div>
+  </div>
+  <div class="flex justify-between pt-10 px-3">
+    <div class="flex flex-col">
+
+      <p class="text-white text-xl  font-bold">Ümumi qiymət: <span id="total-price">0 AZN</span></p>
+      <p class="text-white text-xl font-bold">Seçilmiş yerlər: <span id="selected-seats">-</span></p>
+    </div>
+
+
+    <div class=" p-5" >
+      <a href="buy.htm"><button class="bg-red-500 text-white text-center px-4 max-w-[400px] h-10  rounded-2xl">bilet al</button></a>
+      
+    </div>
+  </div>
+
+     
+
+</div>
+
+    
+  </main>
+  <footer class="bg-[#86312a]  ">
+  <div class="max-w-[1600px] mx-auto pt-3 flex justify-around   flex-wrap gap-36 max-md:justify-center max-lg:gap-16 max-md:gap-10 max-md:grid max-md:grid-cols-3 max-sm:grid-cols-2 max-xs:grid-cols-1">
+    <div class="flex justify-between flex-col max-md:flex-1 max-xs:items-center">
+      <img class="w-[190px] max-sm:flex max-sm:justify-center" src="img/logo.svg" alt="">
+     
+    </div>
+    <div>
+      <ul class="flex gap-5 flex-col max-xs:items-center">
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Kinoteatrlar</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Aksiyalar</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="flex gap-5 flex-col max-xs:items-center">
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Profil</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Əlaqə</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Hüquqi Şərtlər</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-[#D9DADB] font-medium text-base mb-5 max-xs:text-center">Bizi izleyin</p>
+      <div class="flex gap-5 max-sm:flex-wrap max-xs:justify-center  ">
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-instagram"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-facebook"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-youtube"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-telegram"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-tiktok"></i>
+      </div>
+    </div>
+    <div>
+      <img class="max-lg:w-[70px] w-[50px] h-[50px]" src="img/Visa.svg" alt="">
+    </div>
+    <div class="flex items-center justify-between max-md:flex-col max-md:gap-4 container max-w-container ">
+      <p  class="text-[#D9DADB] text-sm max-sm:mt-4">© Park cinema,2025</p>
+      <h4 class="text-[#D9DADB] text-sm max-sm:mt-4">ESAM Innovations</h4>
+    </div>
+  </div>  
+ 
+   
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/ticket.js"></script>
+  <script src="js/seat.js"></script>
+ 
+</body>
+
+</html>

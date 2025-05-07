@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Cinema Tommy</title>
+  <link rel="stylesheet" href="src/input.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/scroll.css">
+  <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-[#373737]">
+  <header class=" fira-sans-medium bg-[#373737] ">
+    <div
+      class=" justify-center  flex  md:justify-between place-content-center items-center w-[100%]  px-12 z-9999  ">
+      <div class="flex place-content-center gap-10 md:gap-15 items-center lg:gap-30 sm:flex justify-center ">
+        <a href="index.htm"><img class="w-[150px] t-0 h-[80px]" src="/img/logo.svg" alt=""></a>
+
+        <ul class=" hidden    text-white  gap-5 md:gap-5 lg:gap-20 text-[16px] md:flex lg:flex ">
+          <li><a class="btnsb " href="">Kinoteatrlar</a></li>
+          <li><a class="btnsb " href="">Aksiyalar</a></li>
+          <li><a class="btnsb " href="">FAQ</a></li>
+          <li><a class="btnsb " href="">Əlaqə</a></li>
+          <li><a class="btnsb " href="">Profil</a></li>
+        </ul>
+
+      </div>
+      <div>
+        <div class="dropdown pt-1 hidden md:flex  lg:flex">
+          <div tabindex="0" role="button" class="btn text-white  bg-transparent border-0 shadow-none"><img
+              src="img/az-flag.svg" alt=""><span>AZE</span><i class="fa-solid fa-chevron-down mr-1"></i></div>
+          <ul tabindex="0"
+            class="dropdown-content menu bg-base-100 rounded-box z-1 w-20 flex  justify-center place-content-center items-center shadow-sm">
+            <li><a><img src="img/az-flag.svg" alt=""><span>AZE</span></a></li>
+            <li><a><img src="img/en-flag.svg" alt=""><span>EN</span></a></li>
+            <li><a><img src="img/ru-flag.svg" alt=""><span>RU</span></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+  <main class=" bg-[#373737]  fira-sans-medium">
+    <section>
+      <div id="detail" class="bg-[#373737] text-white "> </div>
+    </section>
+    <section>
+      <div class="flex items-center mx-auto w-[90%] gap-6 my-3 max-desk:flex-wrap">
+        <div class="flex items-center gap-6 w-full !pt-2">
+          <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
+            <div id="dropdown1" onclick="openDD1()"
+              class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white  transition-colors duration-500 h-[37px] relative">
+              <span class="text-white"><i>Dil</i></span>
+              <svg id="svg1" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false"
+                aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z"></path>
+              </svg>
+              <div id="underline1"
+                class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2">
+              </div>
+            </div>
+            <div id="dropdowncont1"
+              class="flex flex-col w-full py-1 bg-[#928F8F] hidden rounded-sm absolute top-[39px] left-0 z-[999]">
+              <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
+                <span class="w-full text-[rgb(187,186,186)]"><i>Dil</i></span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">AZ</span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">TR</span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">RU</span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">EN</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
+            <div id="dropdown2" onclick="openDD2()"
+              class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] relative">
+              <span class="text-white"><i>Kinoteatr</i></span>
+              <svg id="svg2" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false"
+                aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z"></path>
+              </svg>
+              <div id="underline2"
+                class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2">
+              </div>
+            </div>
+            <div id="dropdowncont2"
+              class="hidden flex-col w-full py-1 bg-[#928F8F] flex  rounded-sm absolute top-[39px] left-0 z-[999]">
+              <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
+                <span class="w-full text-[rgb(187,186,186)]"><i>Kinoteatr</i></span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">Park Bulvar</span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">Metro Park</span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">Flame Towers</span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">Sevinc Mall</span>
+              </div>
+              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                <span class="w-full text-white">Shahdag</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#373737] p-5">
+      <table id="table" class=" w-full min-h-[300px]">
+        <tbody class="text-center">
+        </tbody>
+    </table>
+    </section>
+   
+
+    
+  </main>
+  <footer class="bg-[#86312a]  ">
+  <div class="max-w-[1600px] mx-auto pt-3 flex justify-around   flex-wrap gap-36 max-md:justify-center max-lg:gap-16 max-md:gap-10 max-md:grid max-md:grid-cols-3 max-sm:grid-cols-2 max-xs:grid-cols-1">
+    <div class="flex justify-between flex-col max-md:flex-1 max-xs:items-center">
+      <img class="w-[190px] max-sm:flex max-sm:justify-center" src="img/logo.svg" alt="">
+     
+    </div>
+    <div>
+      <ul class="flex gap-5 flex-col max-xs:items-center">
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Kinoteatrlar</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Aksiyalar</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="flex gap-5 flex-col max-xs:items-center">
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Profil</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Əlaqə</a></li>
+        <li class="text-[#D9DADB] font-medium text-base hover:text-[#fff] duration-200"><a href="">Hüquqi Şərtlər</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-[#D9DADB] font-medium text-base mb-5 max-xs:text-center">Bizi izleyin</p>
+      <div class="flex gap-5 max-sm:flex-wrap max-xs:justify-center  ">
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-instagram"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-facebook"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-youtube"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-telegram"></i>
+        <i class="fa-brands text-[#d52b1e] text-22px bg-white p-2 rounded-[100%]  fa-tiktok"></i>
+      </div>
+    </div>
+    <div>
+      <img class="max-lg:w-[70px] w-[50px] h-[50px]" src="img/Visa.svg" alt="">
+    </div>
+    <div class="flex items-center justify-between max-md:flex-col max-md:gap-4 container max-w-container ">
+      <p  class="text-[#D9DADB] text-sm max-sm:mt-4">© Park cinema,2025</p>
+      <h4 class="text-[#D9DADB] text-sm max-sm:mt-4">ESAM Innovations</h4>
+    </div>
+  </div>  
+ 
+   
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
+ <script src="js/index.js"></script>
+  <script src="js/detail.js"></script>
+  <script src="js/table.js"></script>
+ 
+</body>
+
+</html>
